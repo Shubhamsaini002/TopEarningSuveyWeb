@@ -1,0 +1,19 @@
+<div class="headername">
+  <h2 class="h211">{{currenttabe}}</h2>
+  <label class="main" style="z-index:999;">
+    <div></div>
+    <input class="inp" checked="" type="checkbox" />
+    <div class="bar">
+      <span class="top bar-list"></span>
+      <span class="middle bar-list"></span>
+      <span class="bottom bar-list"></span>
+    </div>
+    <section class="menu-container">
+      <div class="menu-list" (click)="redirectURL('/home','Home')"><h2>Home</h2></div>
+      <div class="menu-list" (click)="redirectURL('/offers','Offers')"><h2>Offers</h2></div>
+      <div class="menu-list" (click)="redirectURL('/redeem','Redeem')"><h2>Redeem</h2></div>
+      <div class="menu-list" (click)="redirectURL('/help','Help')"><h2>Help</h2></div>
+      <div class="menu-list" (click)="redirectURL('/privacy','Privacy')"><h2>Privacy</h2></div>
+    </section>
+  </label>
+</div>
