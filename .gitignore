@@ -1,0 +1,10 @@
+.vscode/
+.vs/
+*.dll
+bin/
+obj/
+/PocketFull.Admin.Api/Properties/PublishProfiles
+/PocketFull.Admin.Api/.config
+/PocketFull.Admin.Api/Properties/ServiceDependencies/pocketsinfullapi - Web Deploy1/profile.arm.json
+/PocketFull.Admin.Api/Properties/ServiceDependencies/pocketsinfullapi - Web Deploy/profile.arm.json
+/PocketFull.Admin.Api/Properties/ServiceDependencies/pocketfullapi - Web Deploy/profile.arm.json
