@@ -6,8 +6,8 @@
     <form class="form">
       <!-- From Uiverse.io by vinodjangid07 -->
       <div class="card">
-        <p class="card-title">Current Balance</p>
-        <p class="balance">$0.00</p>
+        <p class="card-title">Current Balance : $0.50</p>
+        <!--<p class="balance"></p>-->
 
         <svg class="dollar-sign"
              width="40"
@@ -79,13 +79,15 @@
         <hr class="line">
       </div>
       <div class="credit-card-info--form">
-        <div class="input_container">
-          <label for="password_field" class="input_label">Card holder full name</label>
-          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Enter your full name">
-        </div>
-        <div class="input_container">
-          <label for="password_field" class="input_label">Card Number</label>
-          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
+        <div class="split">
+          <div class="input_container">
+            <label for="password_field" class="input_label">Card holder full name</label>
+            <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Enter your full name">
+          </div>
+          <div class="input_container">
+            <label for="password_field" class="input_label">Card Number</label>
+            <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
+          </div>
         </div>
         <div class="input_container">
           <label for="password_field" class="input_label">Expiry Date / CVV</label>
@@ -95,7 +97,7 @@
           </div>
         </div>
       </div>
-      <span class="warning">Your balance is low please complete some tasks to earn.</span>
+      <span class="warning">Your balance is low please complete some tasks to earn. (Min Balance:$1)</span>
       <button class="purchase--btn" disabled>Checkout</button>
     </form>
   </div>
