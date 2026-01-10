@@ -2,7 +2,7 @@
 .form-container {
   /* From Uiverse.io by gharsh11032000 */
   height: 83%;
-  align-items: center;
+  //align-items: center;
 
   .form-container {
     width: 400px;
@@ -13,7 +13,7 @@
     font-family: inherit;
     color: white;
     display: flex;
-    flex-direction: column;
+    
     gap: 20px;
     box-sizing: border-box;
     border-radius: 16px;
@@ -110,7 +110,6 @@
   font-family: inherit;
   color: white;
   display: flex;
-  flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
   border-radius: 16px;
@@ -208,5 +207,6 @@
   gap: 8px; /* 👈 adjust as needed */
   font-size: 18px; /* increase size */
   font-weight: 600;
-  padding-top: 125px;
+  padding-top: 22px;
+  height: 384px;
 }

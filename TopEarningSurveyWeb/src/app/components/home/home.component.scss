@@ -1,11 +1,16 @@
 
 
-
+.sec {
+  background: #18181b;
+  border-radius: 23px;
+  height: 85vh;
+}
 .card-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 12px;
   padding: 12px;
+ 
 }
 
 .card {
