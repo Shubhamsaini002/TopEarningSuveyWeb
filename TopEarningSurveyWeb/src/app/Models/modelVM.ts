@@ -1,6 +1,7 @@
 export class HelpMessage {
   Email: string = "";
   Message: string = "";
+  AccountId: string = "";
 }
 
 export class OfferDeatils {

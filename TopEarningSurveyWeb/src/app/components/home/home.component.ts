@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Analytics, logEvent } from 'firebase/analytics';
+import { Analytics, logEvent } from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-home',
@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
     logEvent(this.analytics, 'pocketsfull_open', {
       user: this.token
     });
+    window.open(this.iframeUrl);
     //await Browser.open({
     //  url: this.iframeUrl
     //});

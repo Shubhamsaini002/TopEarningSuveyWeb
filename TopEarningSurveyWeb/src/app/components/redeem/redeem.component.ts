@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Analytics, logEvent } from 'firebase/analytics';
+import { Analytics, logEvent } from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-redeem',

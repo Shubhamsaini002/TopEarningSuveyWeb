@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Analytics, logEvent } from 'firebase/analytics';
 import { OfferDeatils } from '../../Models/modelVM';
 import { MessageService } from '../../services/message.service';
 import { CommonModule } from '@angular/common';
+import { Analytics, logEvent } from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-offers',
@@ -97,6 +97,7 @@ export class OffersComponent implements OnInit {
     //await Browser.open({
     //  url: data.offerurl
     //});
+    window.open(data.offerurl);
     const userid = localStorage.getItem('token') || "";
     logEvent(this.analytics, 'offer_open', {
       offername: data.offername,

@@ -2,7 +2,7 @@
 .form-container {
   /* From Uiverse.io by gharsh11032000 */
   height: 83%;
-
+  align-items: center;
 
   .form-container {
     width: 400px;
@@ -141,7 +141,7 @@
 }
 
 .form-container .form-group input {
-  width: 100%;
+  width: 85%;
   padding: 12px 16px;
   border-radius: 8px;
   color: #fff;
@@ -151,7 +151,7 @@
 }
 
 .form-container .form-group textarea {
-  width: 100%;
+  width: 85%;
   padding: 12px 16px;
   border-radius: 8px;
   resize: none;
