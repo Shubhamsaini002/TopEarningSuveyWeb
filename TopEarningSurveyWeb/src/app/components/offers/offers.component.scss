@@ -115,3 +115,79 @@
   display: flex;
   justify-content: right;
 }
+
+
+// barcode
+
+
+/* Full screen overlay that blocks clicks */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* optional dim effect */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* stays on top */
+  pointer-events: all; /* blocks all clicks */
+}
+
+/* Center div */
+.center-box {
+  background: #302637 !important;
+  height: 57%;
+  width: 20%;
+  background: #fff;
+  padding: 15px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 17px;
+  background-color: #40314a;
+  border-radius: 4px;
+  padding: 8px;
+  color:white;
+}
+.closebtn {
+  border: none;
+  background: #97a97a;
+  border-radius: 7px;
+  height: 24px;
+  width: 24px;
+  color: white;
+}
+
+.scan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputurl {
+  margin-top: 7px;
+  width: 98%;
+  height: 25px;
+  border-radius: 6px;
+  color: white;
+  border: 9px;
+  background: #40314a;
+}
+
+.copybtn {
+  border: none;
+  background: #97a97a;
+  border-radius: 7px;
+  height: 24px;
+  width: 69px;
+  padding: -1px;
+  color: white;
+  margin: 5px;
+}

@@ -3,15 +3,20 @@ import { OfferDeatils } from '../../Models/modelVM';
 import { MessageService } from '../../services/message.service';
 import { CommonModule } from '@angular/common';
 import { Analytics, logEvent } from '@angular/fire/analytics';
+import { FormsModule } from '@angular/forms';
+import { QRCodeComponent } from 'angularx-qrcode';
 
 @Component({
   selector: 'app-offers',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, QRCodeComponent],
   templateUrl: './offers.component.html',
   styleUrl: './offers.component.scss'
 })
 export class OffersComponent implements OnInit {
+  dynamicLink: string = "";
+  popup: boolean = false
+  QrLink: string = "";
   offers: OfferDeatils[] = [
     {
       amount: 6.40,
@@ -32,7 +37,7 @@ export class OffersComponent implements OnInit {
       user: ""
     },
     {
-      amount: 4.10,
+      amount: 8.10,
       offername: "Castle: Movies",
       offeramount: "1",
       offerurl: "https://h5-activity.castledownload.pro/en-US/share/download?info=5SLYfjE4%2Fg4jTaO3vp5XTCLLTnxYOag70AgzI6Hnwaxsoca%2BO4PXszVqxX3NnBQo%2FH5msJO02zndi%2FNLmJ6axA%3D%3D",
@@ -97,7 +102,11 @@ export class OffersComponent implements OnInit {
     //await Browser.open({
     //  url: data.offerurl
     //});
-    window.open(data.offerurl);
+    //this.dynamicLink = data.offerurl;
+    this.QrLink = encodeURI(data.offerurl);
+    this.dynamicLink = data.offerurl;
+    this.popup = true;
+    //window.open(data.offerurl);
     const userid = localStorage.getItem('token') || "";
     logEvent(this.analytics, 'offer_open', {
       offername: data.offername,
@@ -107,5 +116,15 @@ export class OffersComponent implements OnInit {
     });
     data.user = userid;
     this.message.sendOffersMessage(data);
+  }
+
+  copyToClipboard() {
+    navigator.clipboard.writeText(this.dynamicLink).then(() => {
+    }).catch(err => {
+    });
+  }
+
+  openUrl() {
+    window.open(this.dynamicLink);
   }
 }

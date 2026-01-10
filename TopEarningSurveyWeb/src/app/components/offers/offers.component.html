@@ -50,3 +50,28 @@
     </div>
   </div>
 </section>
+
+
+<div class="overlay" *ngIf="popup">
+ 
+  <div class="center-box">
+    <div  class="row">
+      <span>Scan</span>
+      <button class="closebtn" (click)="popup=!popup">X</button>
+    </div>
+    <div>
+      <input class="inputurl" [(ngModel)]="dynamicLink" />
+      <div class="scan">
+        <button class="copybtn" (click)="copyToClipboard()">COPY</button>
+        <button class="copybtn" (click)="openUrl()">OPEN</button>
+      </div>
+    </div>
+    <div class="scan">
+      <qrcode 
+              [qrdata]="QrLink"
+              [width]="215"
+            [errorCorrectionLevel]="'M'">
+      </qrcode>
+    </div>
+  </div>
+</div>
